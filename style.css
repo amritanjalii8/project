@@ -1,0 +1,163 @@
+/* ========= GLOBAL STYLES ========= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: #f5f7fb;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #1e293b;
+}
+
+/* ========= FORM WRAPPER ========= */
+.form-wrapper {
+  width: 100%;
+  max-width: 820px;
+  background: white;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+.form-wrapper h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.form-wrapper h4 {
+  margin: 0 0 20px 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* ========= FORM LAYOUT ========= */
+.form-site form {
+  width: 100%;
+}
+
+/* Supports both inline-field & inlinefield */
+.inline-field,
+.inlinefield {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.form-field,
+.formfield {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 240px;
+}
+
+/* ========= LABELS ========= */
+.form-field label,
+.formfield label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+/* ========= INPUTS ========= */
+.form-field input,
+.formfield input,
+.form-field select,
+.formfield select {
+  padding: 11px 13px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #dfe7f0;
+  background: #f9fbff;
+  outline: none;
+  transition: 0.18s ease;
+}
+
+.form-field input:focus,
+.formfield input:focus,
+.form-field select:focus,
+.formfield select:focus {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 4px 15px rgba(59,130,246,0.18);
+}
+
+/* ========= FILE INPUT ========= */
+input[type="file"] {
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ========= BUTTONS & NEXT LINKS ========= */
+button,
+.form-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 26px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  text-align: center;
+}
+
+/* Hover animation */
+button:hover,
+.form-wrapper a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.38);
+  background: linear-gradient(135deg, #1e55d4, #1947b5);
+}
+
+/* Click / active effect */
+button:active,
+.form-wrapper a:active {
+  transform: scale(0.97);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+}
+
+/* Optional arrow animation on hover */
+button::after {
+  content: " →";
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: 0.25s ease;
+}
+
+button:hover::after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 720px) {
+  .form-wrapper {
+    padding: 22px;
+  }
+
+  .inline-field,
+  .inlinefield {
+    flex-direction: column;
+  }
+
+  button,
+  .form-wrapper a {
+    width: 100%;
+  }
+}

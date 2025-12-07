@@ -94,5 +94,81 @@ switch($days)
 }
 
 
+echo "<br>";
+
+for ($ab=1;$ab<=10;$ab++)
+{
+    echo "$ab";
+}
+
+
+echo "<br>";
+
+$bb = 5;
+while ($bb <20)
+{
+    echo "$bb";
+    $bb++;
+}
+
+echo "<br>";
+
+$i = 1;
+
+do {
+  echo $i;
+  $i++;
+} while ($i < 6);
+
+echo "<br>";
+
+$i = 8;
+
+do {
+  echo $i;
+  $i++;
+} while ($i < 6);
+
+
+$arr = [["ram",23], ["hari",22],["sita",33]];
+
+foreach($arr as $x){
+    echo "name= $x[0] and age=$x[1]<br>";
+}
+
+$bc=5;
+$cd=6;
+$operand= "+";
+
+if ($operand == "+")
+{
+    $d= $bc+$cd;
+    
+}
+
+else if ($operand == "-")
+{
+    $d= $bc-$cd;
+   
+}
+
+else if ($operand == "*")
+{
+    $d= $bc*$cd;
+    
+}
+
+else if ($operand == "/")
+{
+    $d= $bc/$cd;
+   
+}
+
+else
+{
+    echo "error";
+}
+echo $d;
+
 
 ?>
